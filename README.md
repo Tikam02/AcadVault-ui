@@ -1,5 +1,7 @@
 # AcadVault-ui
 
+[![Join the chat at https://gitter.im/AcadVault-ui/community](https://badges.gitter.im/AcadVault-ui/community.svg)](https://gitter.im/AcadVault-ui/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 > This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 The Web App for [AcadVault](https://github.com/Tikam02/AcadVault).
