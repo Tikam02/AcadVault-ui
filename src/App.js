@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { ThemeProvider, GlobalStyle } from "@react95/core";
 import AppBar from "./components/AppBar";
-
-
+import {tree} from './Api/index';
 
 const Wrapper = styled.div`
   background: rgba(0, 128, 128);
@@ -19,6 +18,9 @@ const Wrapper = styled.div`
 const Heading = styled.h1`
   font-size: 48px;
 `;
+
+const contentTree = tree();
+console.log(contentTree);
 
 const App = () => (
   <>
