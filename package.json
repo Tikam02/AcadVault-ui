@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@octokit/request": "^5.4.9",
     "@react95/core": "^2.11.1",
     "@react95/icons": "^0.4.2",
     "@testing-library/jest-dom": "^4.2.4",
