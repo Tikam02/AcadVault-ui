@@ -27,7 +27,6 @@ const TreeStructure = () => {
         });
       });
   }, []);
-  console.log(treeNodes);
   if (Object.keys(treeNodes).length !== 0) {
     return <Tree data={treeNodes} />;
   }
