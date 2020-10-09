@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ThemeProvider, GlobalStyle, Tree } from "@react95/core";
+import { Tree } from "@react95/core";
 import { request } from "@octokit/request";
 import axios from "axios";
 import { arrangeIntoTree } from "./utils";
@@ -27,7 +27,7 @@ const TreeStructure = () => {
         });
       });
   });
-
+  console.log(treeNodes);
   return <></>;
 };
 
