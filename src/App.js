@@ -1,8 +1,8 @@
 import React from "react";
-import styled from "styled-components";
 import { ThemeProvider, GlobalStyle } from "@react95/core";
+import styled from "styled-components";
 import AppBar from "./components/AppBar";
-import {tree} from './Api/index';
+import TreeStructure from "./components/TreeStructure";
 
 const Wrapper = styled.div`
   background: rgba(0, 128, 128);
@@ -19,19 +19,21 @@ const Heading = styled.h1`
   font-size: 48px;
 `;
 
-const contentTree = tree();
-console.log(contentTree);
-
-const App = () => (
-  <>
-    <GlobalStyle />
-    <ThemeProvider>
-      <Wrapper>
-       <Heading>AcadVault</Heading>
-        <AppBar /> 
-      </Wrapper>
-    </ThemeProvider>
-  </>
-);
+const App = () => {
+  return (
+    <div>
+      {<GlobalStyle />}
+      {
+        <ThemeProvider>
+          <Wrapper>
+            <Heading>AcadVault</Heading>
+            <TreeStructure />
+            <AppBar />
+          </Wrapper>
+        </ThemeProvider>
+      }
+    </div>
+  );
+};
 
 export default App;
