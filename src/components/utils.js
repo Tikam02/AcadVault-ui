@@ -16,6 +16,7 @@ export function arrangeIntoTree(paths) {
         var newPart = {
           name: part,
           children: [],
+          label: part,
         };
 
         currentLevel.push(newPart);
