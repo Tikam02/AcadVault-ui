@@ -26,7 +26,7 @@ const TreeStructure = () => {
           updateNodes(arrangeIntoTree(paths));
         });
       });
-  });
+  }, []);
   console.log(treeNodes);
   return <></>;
 };
