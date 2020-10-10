@@ -1,7 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import {Tree} from '@react95/core';
 import { getTree} from '../Api';
+import path from 'path';
 
+
+const getLabel = function (str) {
+  return str.substring(str.lastIndexOf('/')+1);
+}
 
 function TreeStruture() {
     const [contentTree,setContentTree] = useState([]);
@@ -13,22 +18,11 @@ function TreeStruture() {
       fetchTree();
     },[]);
 
-
-  const label = function (str) {
-      return str.substring(str.lastIndexOf('/')+1);
-  }
-
-  const files = contentTree.map(file => {
-    file.label = label(file.path)
-    return file
-  });
-
+  const files = useMemo(() => contentTree.map(file => ({ ...file, label: getLabel(file.path) })), [contentTree])
 
   function treeify(files) {
-    var path = require('path')
-  
     files = files.reduce(function(tree, f) {
-      var dir = path.dirname(f.path)
+      const dir = path.dirname(f.path)
   
       if (tree[dir]) {
         tree[dir].children.push(f)
