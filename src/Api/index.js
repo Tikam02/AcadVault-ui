@@ -19,11 +19,11 @@ const content = async() =>{
 }
 
 
-export const tree = async() => {
+export const getTree = async() => {
     const tree_sha = await content();
 
     try{
-       const {data} = await request(`GET /repos/Tikam02/AcadVault/git/trees/${tree_sha}`, {
+       const {data: {tree}} = await request(`GET /repos/Tikam02/AcadVault/git/trees/${tree_sha}`, {
         baseUrl: url,
         accept: 'application/vnd.github.v3+json',
         owner: 'Tikam02',
@@ -31,7 +31,7 @@ export const tree = async() => {
         tree_sha: tree_sha,
         recursive:'true'
        });
-       return data;
+       return tree;
     }
     catch(error){
         console.log(error);
