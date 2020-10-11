@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { ThemeProvider, GlobalStyle } from "@react95/core";
 import AppBar from "./components/AppBar";
-import {tree} from './Api/index';
+import Tree from './components/tree';
 
 const Wrapper = styled.div`
   background: rgba(0, 128, 128);
@@ -19,9 +19,6 @@ const Heading = styled.h1`
   font-size: 48px;
 `;
 
-const contentTree = tree();
-console.log(contentTree);
-
 const App = () => (
   <>
     <GlobalStyle />
@@ -29,6 +26,7 @@ const App = () => (
       <Wrapper>
        <Heading>AcadVault</Heading>
         <AppBar /> 
+        <Tree />
       </Wrapper>
     </ThemeProvider>
   </>
